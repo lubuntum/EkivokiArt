@@ -1,4 +1,4 @@
-package com.pavel.ekivoki.gamentry;
+package com.pavel.ekivoki.ui.gamentry;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
