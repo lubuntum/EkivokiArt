@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 
-import com.pavel.ekivoki.gamentry.GameEntryFragment;
+import com.pavel.ekivoki.ui.gamentry.GameEntryFragment;
 
 public class MainActivity extends AppCompatActivity {
 
