@@ -14,9 +14,9 @@ import java.util.concurrent.Executors;
 
 public class CategoryRepository {
     private Database database;
-    private Executor threadIOExecutor;
+    private final Executor threadIOExecutor;
 
-    private CategoryDao categoryDao;
+    private final CategoryDao categoryDao;
 
     private static volatile CategoryRepository INSTANCE = null;
     public static CategoryRepository getInstance(Application application){
