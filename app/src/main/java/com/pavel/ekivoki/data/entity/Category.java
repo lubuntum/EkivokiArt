@@ -6,6 +6,8 @@ import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+import java.util.List;
+
 @Entity(tableName = "category",
         indices = {@Index(value = "category_name",unique = true)})
 public class Category {
@@ -17,6 +19,9 @@ public class Category {
     private String description;
     @ColumnInfo(name="imageUrl")
     private String imageUrl;
+
+    @Ignore
+    private List<Word> words;
 
     public Category(){}
     @Ignore
@@ -59,5 +64,13 @@ public class Category {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public List<Word> getWords() {
+        return words;
+    }
+
+    public void setWords(List<Word> words) {
+        this.words = words;
     }
 }

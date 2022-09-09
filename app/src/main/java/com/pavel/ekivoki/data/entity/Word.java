@@ -10,7 +10,7 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "word",
-indices = {@Index(value = {"name"},unique = true)},
+indices = {@Index(value = {"word"},unique = true),@Index(value = {"category_id"})},
 foreignKeys = {@ForeignKey(entity = Category.class,parentColumns = "id",childColumns = "category_id",onDelete = CASCADE)})
 public class Word {
     @PrimaryKey(autoGenerate = true)
@@ -19,6 +19,8 @@ public class Word {
     private Long categoryId;
     @ColumnInfo(name = "word")
     private String word;
+    @Ignore
+    private Category category;
 
     public Word(){}
     @Ignore
@@ -48,5 +50,13 @@ public class Word {
 
     public void setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
