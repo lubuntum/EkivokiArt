@@ -17,8 +17,8 @@ import com.pavel.ekivoki.data.entity.Word;
 import java.util.List;
 
 public class WordsAdapter extends ArrayAdapter<Word> {
-    private LayoutInflater layoutInflater;
-    private int resource;
+    private final LayoutInflater layoutInflater;
+    private final int resource;
     private List<Word> words;
 
 
