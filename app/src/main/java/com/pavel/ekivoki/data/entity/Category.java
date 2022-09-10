@@ -17,8 +17,8 @@ public class Category {
     private String categoryName;
     @ColumnInfo(name = "description")
     private String description;
-    @ColumnInfo(name="imageUrl")
-    private String imageUrl;
+    @ColumnInfo(name="image_resource")
+    private int imageResourceId;
 
     @Ignore
     private List<Word> words;
@@ -29,9 +29,9 @@ public class Category {
         this.categoryName = categoryName;
     }
     @Ignore
-    public Category(String categoryName, String imageUrl){
+    public Category(String categoryName, int imageResourceId){
         this.categoryName = categoryName;
-        this.imageUrl = imageUrl;
+        this.imageResourceId = imageResourceId;
     }
 
     public Long getId() {
@@ -58,12 +58,12 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public int getImageResourceId() {
+        return imageResourceId;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImageResourceId(int imageResourceId) {
+        this.imageResourceId = imageResourceId;
     }
 
     public List<Word> getWords() {
